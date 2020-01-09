@@ -1,1 +1,36 @@
-<h1>Maine page</h1>
+<h1>Wellcome to Pizzashop!</h1>
+<br/>
+<br/>
+<div class="row">
+	
+	<% @products.each do |p| %>
+	    <div class="col-md-4">
+	      	<div>
+	      		<p><%= p.title %></p><br/>
+	    	</div>
+
+	    	<div>
+	    		<p><img src="<%= p.path_to_image %>" class="image"/></p>
+	   		</div>
+	    
+	    	<div>
+	      		<%= p.description %>
+	    	</div>
+
+	    	<div>
+	    		Size: <%= p.size %>
+	    	</div>
+
+	    	<div>
+	    		Price: <%= p.price %>
+	    	</div>
+
+	    	<div>
+	    		<button type="button" class="btn btn-success btn-sm">Add to cart</button>
+	    	</div>
+
+	    </div>
+
+	<% end %>
+</div>
+
