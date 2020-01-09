@@ -1,4 +1,4 @@
-function add_to_cart()
+function add_to_cart(id)
 {
-	alert('hello from function!');
+	alert('You choose Pizza with id: ' + id);
 }
