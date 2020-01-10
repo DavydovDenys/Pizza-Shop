@@ -17,3 +17,7 @@ end
 get '/' do
 	erb :index
 end
+
+post '/cart' do
+	erb "Hello World"
+end

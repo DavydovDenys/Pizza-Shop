@@ -43,7 +43,10 @@
 			    </ul>
 			  	<ul class="nav navbar-nav navbar-right">
 			  	<li>
-			  		<a class="nav-link active" href="#">Cart(...)</a>
+			  		<form action="/cart" method="post">
+			  			<input type="text" name="orders"/>
+			  			<input type="submit" class="btn btn-primary btn-lg" value="Cart"/>
+			  		</form>
 			  	</li>			  	
 			  	</ul>
 			  </div><!--/.nav-collapse -->
