@@ -5,6 +5,14 @@ function add_to_cart(id)
 	var x = window.localStorage.getItem(key);
 	x = x * 1 + 1;
 	window.localStorage.setItem(key, x);
+
+	update_orders_input();
+}
+
+function update_orders_input()
+{
+	var orders = cart_get_orders();
+	$('#orders_input').val(orders);
 }
 
 function total_elements()
