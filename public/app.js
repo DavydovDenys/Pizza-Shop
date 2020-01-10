@@ -15,5 +15,23 @@ function total_elements()
     	var x = localStorage.getItem(localStorage.key(i));
     	total = x * 1 + total;
 	}
-	alert('Total products:' + total);
+	return('Total products:' + total);
+}
+
+function cart_get_orders()
+{
+	var total = ''
+
+	for (var i = 0; i < localStorage.length; i++)
+	{
+		var key = window.localStorage.key(i);
+		var value = window.localStorage.getItem(key);
+
+		if (key.indexOf('product_') == 0)
+		{
+			total = total + key + '=' + value*1 + ',';
+
+		}	
+	}
+	return total
 }
