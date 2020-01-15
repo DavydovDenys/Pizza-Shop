@@ -23,7 +23,7 @@
 		    <td><%= item[1] %></td>
 
     	</tr>
-			<% total_price = item[0].price * item[1].to_i %>
+			<% total_price = total_price + item[0].price * item[1].to_i %>
 			<% total_qty = item[1].to_i + total_qty %>
 		<% end %>
 
