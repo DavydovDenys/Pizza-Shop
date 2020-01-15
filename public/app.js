@@ -8,6 +8,7 @@ function add_to_cart(id)
 
 	update_orders_input();
 	update_orders_button();
+	c();
 }
 
 function update_orders_input()
@@ -18,7 +19,7 @@ function update_orders_input()
 
 function update_orders_button() 
 {
-	var text = 'Cart (' + total_elements() + ')';
+	var text = 'Корзина (' + total_elements() + ')';
 	$('#orders_button').val(text);	
 }
 
@@ -50,3 +51,21 @@ function cart_get_orders()
 	}
 	return total
 }
+
+
+function c()
+{
+	var x = cart_get_orders();
+	$('#i').val(x);
+	
+}
+
+
+
+
+
+
+
+
+
+

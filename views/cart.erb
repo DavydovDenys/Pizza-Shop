@@ -1,0 +1,76 @@
+<h1>Order details</h1>
+<br/>
+<table class="table">
+	<thead>
+   		<tr>
+      
+	    	<th scope="col">Id</th>
+	    	<th scope="col">Title</th>
+	    	<th scope="col">Description</th>
+	    	<th scope="col">Price</th>
+	    	<th scope="col">Size</th>
+	    	<th scope="col">Spicy</th>
+	    	<th scope="col">Vegetarian</th>
+	    	<th scope="col">Best offer</th>
+	    	<th scope="col">Images</th>
+	    	<th scope="col">Quantity</th>
+    
+    	</tr>  
+	</thead>
+	<% @products.each do |p| %>
+	<tbody>
+    	<tr>
+      
+    		<th scope="row"><%= p.id %></th>
+	    
+		    <td><%= p.title %></td>
+		    <td><%= p.description %></td>
+		    <td><%= p.price %></td>
+		    <td><%= p.size %></td>
+		    <td><%= p.is_spicy %></td>
+		    <td><%= p.is_veg %></td>
+		    <td><%= p.is_best_offer %></td>
+		    <td><%= p.path_to_image %></td>
+		    <!-- <td><input id="i" type="text" name="orders"/></td> -->
+		    <td><span id="key"></span></td>
+
+    	</tr>
+	</tbody>
+	<% end %>
+</table>
+
+
+
+
+<!-- <head>
+  <script>
+    function myFunction() {
+      var number = 1;
+      document.getElementById("key").innerHTML = number;
+
+      var x = 2;
+      document.getElementById("value").innerHTML = number;
+    }
+
+  </script>
+</head>
+ -->
+<body>
+
+  <h1>"The key is: " <span id="key"></span></h1>
+  <h1>"The key is: " <span id="value"></span></h1>
+
+</body>
+
+
+
+
+
+<script type="text/javascript">
+$(function() {
+	c();
+	myFunction();
+	myFunction2();
+});	
+
+</script>
